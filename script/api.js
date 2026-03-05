@@ -5,8 +5,8 @@ const loadPost = () => {
         .then((res) => res.json())
         // promise of json data
         .then((data) => displayPost(data)); // it will send data to display post
-
-    displayPost = (posts) => {
+}
+  const  displayPost = (posts) => {
         // get the container
         const divContainer = document.getElementById("card-container")
         divContainer.innerHTML=""
@@ -15,7 +15,7 @@ const loadPost = () => {
             const div = document.createElement("div")
             // put the data to div
             div.innerHTML=`
-            <div class=" card bg-base-100 w-[100] drop-shadow-md ">
+            <div class=" card bg-base-100  drop-shadow-md ">
             <div class="card-body bg-purple-100">
                 <p  class="font-bold text-3xl"> Post: ${post.id}</p>
                 <h2 class="card-title">${post.title}</h2>
@@ -31,4 +31,3 @@ const loadPost = () => {
 
         });
     }
-}
